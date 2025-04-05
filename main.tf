@@ -2,7 +2,7 @@ terraform {
   required_version = ">= 0.12"
 
   required_providers {
-    azurerm = ">= 2.31.1"
+    azurerm = "=3.0.0"
   }
 
 }
@@ -47,13 +47,13 @@ resource "azurerm_subnet" "subnet" {
 }
 
 
-#Creating ssh-key
-resource "azurerm_ssh_public_key" "name" {
-name = "pub-key"
-depends_on = [
-  azurerm_resource_group.rg
-]
-resource_group_name = var.rg
-location = var.location
-public_key = file("terraform-azure.pub")
-}
+# #Creating ssh-key
+# resource "azurerm_ssh_public_key" "name" {
+# name = "pub-key"
+# depends_on = [
+#   azurerm_resource_group.rg
+# ]
+# resource_group_name = var.rg
+# location = var.location
+# public_key = file("terraform-azure.pub")
+# }
