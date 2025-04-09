@@ -1,0 +1,11 @@
+# Terraform files
+.terraform
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+providers/
+.terraformrc
+terraform.rc
+.terraform.*
